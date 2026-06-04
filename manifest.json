@@ -1,0 +1,58 @@
+{
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "name": "DolphinPark",
+  "description": "Bright tropical ocean theme. Wave Race 64 dolphin park energy — sunny aqua lagoon blues, crisp white, high contrast and readable.",
+  "author": "Nyx Aetherlink / VoidTrace",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "dolphinpark-theme@voidtrace.com"
+    }
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#0096c7",
+      "frame_inactive": "#48cae4",
+      "tab_background_text": "#023e8a",
+      "tab_text": "#03045e",
+      "tab_line": "#0077b6",
+      "tab_selected": "#caf0f8",
+      "toolbar": "#90e0ef",
+      "toolbar_text": "#03045e",
+      "toolbar_field": "#ffffff",
+      "toolbar_field_text": "#03045e",
+      "toolbar_field_border": "#48cae4",
+      "toolbar_field_focus": "#f0fbff",
+      "toolbar_field_text_focus": "#03045e",
+      "toolbar_field_border_focus": "#0096c7",
+      "toolbar_field_highlight": "#48cae4",
+      "toolbar_field_highlight_text": "#03045e",
+      "toolbar_top_separator": "#0077b6",
+      "toolbar_bottom_separator": "#48cae4",
+      "icons": "#0077b6",
+      "icons_attention": "#ff6b35",
+      "button_background_active": "#48cae4",
+      "button_background_hover": "#90e0ef",
+      "popup": "#e0f4fd",
+      "popup_text": "#03045e",
+      "popup_border": "#48cae4",
+      "popup_highlight": "#48cae4",
+      "popup_highlight_text": "#03045e",
+      "sidebar": "#caf0f8",
+      "sidebar_text": "#03045e",
+      "sidebar_highlight": "#48cae4",
+      "sidebar_highlight_text": "#03045e",
+      "sidebar_border": "#90e0ef",
+      "ntp_background": "#caf0f8",
+      "ntp_text": "#03045e"
+    },
+    "properties": {
+      "color_scheme": "light",
+      "content_color_scheme": "light"
+    }
+  }
+}

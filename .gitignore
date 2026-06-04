@@ -1,0 +1,20 @@
+# Packaged Firefox theme extension
+*.xpi
+*.zip
+
+# Source Assets & Build Scripts
+dolphin_park_icon_source.png
+dolphin_park_header.png
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Editor configurations
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
