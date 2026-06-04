@@ -61,8 +61,9 @@ Since the repository is focused purely on source assets, the final package is co
 
 2. Compile the extension (produces `dolphin_park_theme.xpi`):
 
-   ```fish
-   fish install.sh
+   ```bash
+   chmod +x install.sh
+   ./install.sh
    ```
 
 ---

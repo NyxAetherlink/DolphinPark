@@ -1,36 +1,40 @@
-#!/usr/bin/env fish
-# DolphinPark Firefox Theme - Install Script
-# Usage: fish install.sh
+#!/bin/bash
+# DolphinPark Firefox Theme - Install/Package Script
+# Usage: ./install.sh
 
-set THEME_DIR (dirname (status --current-filename))
+# Resolve directory path portably
+THEME_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "🐬 DolphinPark Theme Installer"
 echo "------------------------------"
 
 # Create icons directory
-mkdir -p $THEME_DIR/icons
+mkdir -p "$THEME_DIR/icons"
 
 # Check for icon
-if not test -f "$THEME_DIR/icons/icon-48.png"
+if [ ! -f "$THEME_DIR/icons/icon-48.png" ]; then
     echo "❌ Missing: icons/icon-48.png"
     echo "   Copy the generated icon image to: $THEME_DIR/icons/icon-48.png"
     exit 1
-end
+fi
 
 # Create 96px icon as copy of 48px if missing
-if not test -f "$THEME_DIR/icons/icon-96.png"
+if [ ! -f "$THEME_DIR/icons/icon-96.png" ]; then
     cp "$THEME_DIR/icons/icon-48.png" "$THEME_DIR/icons/icon-96.png"
     echo "✅ Created icons/icon-96.png from icon-48.png"
-end
+fi
 
 echo "✅ All assets present"
 
 # Package as .xpi (just a zip with .xpi extension)
-cd $THEME_DIR
-set XPI_PATH "$THEME_DIR/dolphin_park_theme.xpi"
+cd "$THEME_DIR"
+XPI_PATH="$THEME_DIR/dolphin_park_theme.xpi"
+
+# Clean up old temporary files
+rm -f /tmp/dolphin_park_theme.zip
 
 zip -r /tmp/dolphin_park_theme.zip manifest.json icons/
-mv /tmp/dolphin_park_theme.zip $XPI_PATH
+mv /tmp/dolphin_park_theme.zip "$XPI_PATH"
 
 echo "✅ Packaged: $XPI_PATH"
 echo ""
